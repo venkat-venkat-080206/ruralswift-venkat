@@ -1,0 +1,275 @@
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header d-lg-none">
+
+  <div class="mobile-logo">
+    RuralSwift
+  </div>
+
+  <button
+    class="menu-btn"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#mobileMenu">
+
+    <i class="bi bi-list"></i>
+
+  </button>
+
+</div>
+
+<!-- MOBILE MENU -->
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="mobileMenu">
+
+  <div class="offcanvas-header">
+
+    <h5 class="offcanvas-title">RuralSwift</h5>
+
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas">
+    </button>
+
+  </div>
+
+  <div class="offcanvas-body">
+
+    <div class="mobile-menu">
+
+      <a class="mobile-link active">
+        <i class="bi bi-grid-fill"></i>
+        <span>Dashboard</span>
+      </a>
+
+      <a class="mobile-link">
+        <i class="bi bi-bag-fill"></i>
+        <span>My Orders</span>
+      </a>
+
+      <a class="mobile-link">
+        <i class="bi bi-truck"></i>
+        <span>Track Orders</span>
+      </a>
+
+      <a routerLink="/profile" class="mobile-link">
+        <i class="bi bi-person-fill"></i>
+        <span>Profile</span>
+      </a>
+
+      <a class="mobile-link">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span>Address</span>
+      </a>
+
+      <a class="mobile-link">
+        <i class="bi bi-heart-fill"></i>
+        <span>Wishlist</span>
+      </a>
+
+      <a class="mobile-link">
+        <i class="bi bi-chat-left-text-fill"></i>
+        <span>Feedback</span>
+      </a>
+
+      <a class="mobile-link">
+        <i class="bi bi-gear-fill"></i>
+        <span>Settings</span>
+      </a>
+
+      <a class="mobile-link logout-link">
+        <i class="bi bi-box-arrow-right"></i>
+        <span>Logout</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- DASHBOARD -->
+<div class="container-fluid dashboard-wrapper">
+
+  <div class="row g-4">
+
+    <!-- SIDEBAR -->
+    <div class="col-lg-3 d-none d-lg-block">
+
+      <div class="sidebar-card">
+
+        <div class="profile-section">
+
+          <div class="avatar">
+            <i class="bi bi-person-fill"></i>
+          </div>
+
+          <h4>{{ customerName }}</h4>
+
+          <p>RuralSwift Customer</p>
+
+        </div>
+
+        <div class="menu-list">
+
+          <a class="menu-link active">
+            <i class="bi bi-grid-fill"></i>
+            Dashboard
+          </a>
+
+          <a class="menu-link">
+            <i class="bi bi-bag-fill"></i>
+            My Orders
+          </a>
+
+          <a class="menu-link">
+            <i class="bi bi-truck"></i>
+            Track Orders
+          </a>
+
+          <a routerLink="/profile" class="menu-link">
+            <i class="bi bi-person-fill"></i>
+            Profile
+          </a>
+
+          <a class="menu-link">
+            <i class="bi bi-geo-alt-fill"></i>
+            Address
+          </a>
+
+          <a class="menu-link">
+            <i class="bi bi-heart-fill"></i>
+            Wishlist
+          </a>
+
+          <a class="menu-link">
+            <i class="bi bi-chat-left-text-fill"></i>
+            Feedback
+          </a>
+
+          <a class="menu-link">
+            <i class="bi bi-gear-fill"></i>
+            Settings
+          </a>
+
+          <a class="menu-link logout-link">
+            <i class="bi bi-box-arrow-right"></i>
+            Logout
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="col-lg-9">
+
+      <div class="welcome-card">
+
+        <h2>
+          Welcome Back,
+          <span>{{ customerName }}</span>
+        </h2>
+
+        <p>
+          Manage your orders, deliveries and account.
+        </p>
+
+      </div>
+
+      <!-- STATS -->
+      <div class="row g-3">
+
+        <div class="col-6 col-md-6 col-lg-3">
+          <div class="stat-card">
+            <i class="bi bi-box-seam text-primary"></i>
+            <h3>0</h3>
+            <p>Total Orders</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+          <div class="stat-card">
+            <i class="bi bi-truck text-success"></i>
+            <h3>0</h3>
+            <p>Active Orders</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+          <div class="stat-card">
+            <i class="bi bi-check-circle text-info"></i>
+            <h3>0</h3>
+            <p>Delivered</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+          <div class="stat-card">
+            <i class="bi bi-heart-fill text-danger"></i>
+            <h3>0</h3>
+            <p>Wishlist</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- QUICK ACTIONS -->
+      <div class="section-card mt-4">
+
+        <h5>Quick Actions</h5>
+
+        <div class="quick-actions">
+
+          <button class="btn btn-shop">
+            <i class="bi bi-bag-fill me-2"></i>
+            Shop Now
+          </button>
+
+          <button class="btn btn-track">
+            <i class="bi bi-truck me-2"></i>
+            Track Order
+          </button>
+
+          <button class="btn btn-wishlist">
+            <i class="bi bi-heart-fill me-2"></i>
+            Wishlist
+          </button>
+
+          <button class="btn btn-support">
+            <i class="bi bi-headset me-2"></i>
+            Support
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- RECENT ORDERS -->
+      <div class="section-card mt-4">
+
+        <h5>Recent Orders</h5>
+
+        <div class="empty-orders">
+
+          <i class="bi bi-box-seam"></i>
+
+          <h4>No Orders Yet</h4>
+
+          <p>Your recent orders will appear here.</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+```
