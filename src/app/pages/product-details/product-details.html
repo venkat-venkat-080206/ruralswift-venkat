@@ -1,0 +1,874 @@
+<!-- ===========================
+     HEADER
+=========================== -->
+
+<h1 class="text-danger">
+  <i class="bi bi-alarm-fill"></i> TEST ICON
+</h1>
+
+<nav class="navbar navbar-expand-lg product-header sticky-top">
+
+  <div class="container-fluid px-3 px-lg-4">
+
+    <!-- Left -->
+
+    <div class="d-flex align-items-center">
+
+      <a
+        routerLink="/products"
+        class="btn btn-light rounded-circle me-3">
+
+        <i class="bi bi-arrow-left"></i>
+
+      </a>
+
+      <h4 class="text-white fw-bold mb-0">
+
+        Product Details
+
+      </h4>
+
+    </div>
+
+    <!-- Toggle -->
+
+    <button
+      class="navbar-toggler bg-white"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarContent">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <!-- Right -->
+
+   <div
+  class="collapse navbar-collapse mt-3 mt-lg-0"
+  id="navbarContent">
+
+      <!-- Search -->
+
+      <form class="d-flex flex-grow-1 mx-lg-4">
+
+        <div class="input-group">
+
+          <span class="input-group-text">
+
+            <i class="bi bi-search fs-1 text-danger"></i>
+
+          </span>
+
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Search products...">
+
+        </div>
+
+      </form>
+
+      <!-- Icons -->
+
+      <div
+        class="d-flex align-items-center gap-2 justify-content-end mt-3 mt-lg-0">
+
+        <button class="btn btn-light position-relative">
+
+          <i class="bi bi-heart-fill fs-1 text-danger"></i>
+
+          <span
+            class="badge bg-danger position-absolute top-0 start-100 translate-middle">
+
+            2
+
+          </span>
+
+        </button>
+
+        <button class="btn btn-light position-relative">
+
+          <i class="bi bi-cart-fill fs-1 text-success"></i>
+
+          <span
+            class="badge bg-success position-absolute top-0 start-100 translate-middle">
+
+            3
+
+          </span>
+
+        </button>
+
+        <button
+          routerLink="/profile"
+          class="btn btn-warning">
+
+          <i class="bi bi-person-circle me-2"></i>
+
+          <span class="d-none d-lg-inline">
+
+            Profile
+
+          </span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>
+<!-- ==========================================
+        PRODUCT DETAILS
+========================================== -->
+
+<section class="container py-5">
+
+    <div class="row g-5">
+
+        <!-- LEFT -->
+
+        <div class="col-lg-5">
+
+            <!-- Main Image -->
+
+            <div class="card border-0 shadow-sm rounded-4">
+
+                
+                    <img
+    [src]="product.image"
+    class="img-fluid rounded-4 product-main-img"
+    [alt]="product.name">
+            </div>
+
+            <!-- Thumbnail Images -->
+
+            <div class="row g-3 mt-2">
+
+                <div class="col-3">
+
+                    <img
+                        src="assets/products/kurti.jpg"
+                        class="img-fluid rounded-3 thumb-img">
+
+                </div>
+
+                <div class="col-3">
+
+                    <img
+                        src="assets/products/kurti2.jpg"
+                        class="img-fluid rounded-3 thumb-img">
+
+                </div>
+
+                <div class="col-3">
+
+                    <img
+                        src="assets/products/kurti3.jpg"
+                        class="img-fluid rounded-3 thumb-img">
+
+                </div>
+
+                <div class="col-3">
+
+                    <img
+                        src="assets/products/kurti4.jpg"
+                        class="img-fluid rounded-3 thumb-img">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="col-lg-7">
+
+            <span class="badge bg-primary mb-3">
+
+             {{ product.category }}
+
+             </span>
+
+            <h2 class="fw-bold">
+
+             {{ product.name }}
+
+              </h2>
+
+            <div class="d-flex align-items-center gap-3 mt-3">
+
+                <span class="badge bg-success">
+
+                    ★ {{ product.rating }}
+
+                </span>
+
+                <span class="text-muted">
+
+                    ★ {{ product.rating }}
+
+                </span>
+
+            </div>
+
+            <div class="mt-4">
+
+                <h2 class="fw-bold text-success">
+
+                    ₹{{ product.price }}
+
+                    <small
+                        class="text-decoration-line-through text-muted ms-2">
+
+                        ₹{{ product.oldPrice }}
+
+                    </small>
+
+                </h2>
+
+                <span class="badge bg-danger">
+
+                    {{ product.offer }}
+
+                </span>
+
+            </div>
+
+            <div class="alert alert-success mt-4">
+
+                <i class="bi bi-truck me-2"></i>
+
+                Free Delivery Available
+
+            </div>
+
+            <div class="alert alert-warning">
+
+                <i class="bi bi-lightning-charge me-2"></i>
+
+                Delivery in 2 - 4 Days
+
+            </div>
+
+            <div class="alert alert-info">
+
+                <i class="bi bi-patch-check me-2"></i>
+
+                In Stock
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================================
+        SIZE SELECTION
+========================================== -->
+
+<section class="container pb-4">
+
+    <div class="card border-0 shadow-sm rounded-4 p-4">
+
+        <h5 class="fw-bold mb-3">
+
+            Select Size
+
+        </h5>
+
+        <div class="d-flex flex-wrap gap-3">
+
+            <button class="btn btn-outline-primary rounded-pill px-4">
+
+                S
+
+            </button>
+
+            <button class="btn btn-primary rounded-pill px-4">
+
+                M
+
+            </button>
+
+            <button class="btn btn-outline-primary rounded-pill px-4">
+
+                L
+
+            </button>
+
+            <button class="btn btn-outline-primary rounded-pill px-4">
+
+                XL
+
+            </button>
+
+            <button class="btn btn-outline-primary rounded-pill px-4">
+
+                XXL
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        COLOR
+========================================== -->
+
+<section class="container pb-4">
+
+    <div class="card border-0 shadow-sm rounded-4 p-4">
+
+        <h5 class="fw-bold mb-3">
+
+            Available Colors
+
+        </h5>
+
+        <div class="d-flex gap-3">
+
+            <button
+                class="btn rounded-circle color-btn"
+                style="background:#2563EB">
+
+            </button>
+
+            <button
+                class="btn rounded-circle color-btn"
+                style="background:#111827">
+
+            </button>
+
+            <button
+                class="btn rounded-circle color-btn"
+                style="background:#EC4899">
+
+            </button>
+
+            <button
+                class="btn rounded-circle color-btn"
+                style="background:#16A34A">
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        QUANTITY
+========================================== -->
+
+<section class="container pb-4">
+
+    <div class="card border-0 shadow-sm rounded-4 p-4">
+
+        <h5 class="fw-bold mb-3">
+
+            Quantity
+
+        </h5>
+
+        <div class="d-flex align-items-center gap-3">
+
+            <button class="btn btn-outline-primary">
+
+                <i class="bi bi-dash-lg"></i>
+
+            </button>
+
+            <h4 class="mb-0">
+
+                1
+
+            </h4>
+
+            <button class="btn btn-primary">
+
+                <i class="bi bi-plus-lg"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        BUTTONS
+========================================== -->
+
+<section class="container pb-5">
+
+  <div class="row g-3">
+
+    <div class="col-md-6">
+      <button class="btn btn-outline-primary w-100 py-3 fw-bold">
+        <i class="bi bi-cart3 me-2"></i>
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="col-md-6">
+      <button class="btn btn-warning w-100 py-3 fw-bold">
+        <i class="bi bi-lightning-fill me-2"></i>
+        Buy Now
+      </button>
+    </div>
+
+  </div>
+
+</section>
+<!-- ==========================================
+        PRODUCT HIGHLIGHTS
+========================================== -->
+
+<section class="container pb-4">
+
+    <div class="card shadow-sm border-0 rounded-4">
+
+        <div class="card-body">
+
+            <h4 class="fw-bold mb-4">
+
+                Product Highlights
+
+            </h4>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+
+                    <strong>Fabric :</strong>
+
+                    Pure Cotton
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <strong>Pattern :</strong>
+
+                    Printed
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <strong>Fit :</strong>
+
+                    Regular Fit
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <strong>Sleeve :</strong>
+
+                    3/4 Sleeve
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <strong>Neck :</strong>
+
+                    Round Neck
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <strong>Country :</strong>
+
+                    India
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        DESCRIPTION
+========================================== -->
+
+<section class="container pb-4">
+
+    <div class="card shadow-sm border-0 rounded-4">
+
+        <div class="card-body">
+
+            <h4 class="fw-bold mb-3">
+
+                Product Description
+
+            </h4>
+
+            <p class="text-muted">
+
+                This premium cotton kurti is designed for comfort and elegance.
+                Soft breathable fabric makes it suitable for office,
+                college, casual outings and daily wear.
+                Durable stitching ensures long-lasting quality.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        CUSTOMER REVIEWS
+========================================== -->
+
+<section class="container pb-4">
+
+    <div class="card shadow-sm border-0 rounded-4">
+
+        <div class="card-body">
+
+            <h4 class="fw-bold mb-4">
+
+                Customer Reviews
+
+            </h4>
+
+            <div class="border-bottom pb-3 mb-3">
+
+                <h6>
+
+                    ⭐⭐⭐⭐⭐ Priya
+
+                </h6>
+
+                <p class="text-muted">
+
+                    Excellent quality. Worth every rupee.
+
+                </p>
+
+            </div>
+
+            <div class="border-bottom pb-3 mb-3">
+
+                <h6>
+
+                    ⭐⭐⭐⭐☆ Divya
+
+                </h6>
+
+                <p class="text-muted">
+
+                    Nice fabric and perfect fitting.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h6>
+
+                    ⭐⭐⭐⭐⭐ Keerthana
+
+                </h6>
+
+                <p class="text-muted">
+
+                    Delivery was fast. Colour is exactly the same.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        RELATED PRODUCTS
+========================================== -->
+
+<section class="container pb-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h3 class="fw-bold">
+
+            Related Products
+
+        </h3>
+
+        <button class="btn btn-outline-primary">
+
+            View All
+
+        </button>
+
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
+            <div class="card product-card h-100 shadow-sm">
+
+                <img
+                    src="assets/products/saree.jpg"
+                    class="card-img-top">
+
+                <div class="card-body">
+
+                    <h6>
+
+                        Silk Saree
+
+                    </h6>
+
+                    <h5 class="text-success">
+
+                        ₹1299
+
+                    </h5>
+
+                    <button class="btn btn-primary w-100">
+
+                        View
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
+            <div class="card product-card h-100 shadow-sm">
+
+                <img
+                    src="assets/products/shirt.jpg"
+                    class="card-img-top">
+
+                <div class="card-body">
+
+                    <h6>
+
+                        Casual Shirt
+
+                    </h6>
+
+                    <h5 class="text-success">
+
+                        ₹699
+
+                    </h5>
+
+                    <button class="btn btn-primary w-100">
+
+                        View
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
+            <div class="card product-card h-100 shadow-sm">
+
+                <img
+                    src="assets/products/shoes.jpg"
+                    class="card-img-top">
+
+                <div class="card-body">
+
+                    <h6>
+
+                        Running Shoes
+
+                    </h6>
+
+                    <h5 class="text-success">
+
+                        ₹999
+
+                    </h5>
+
+                    <button class="btn btn-primary w-100">
+
+                        View
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+
+            <div class="card product-card h-100 shadow-sm">
+
+                <img
+                    src="assets/products/laptop.jpg"
+                    class="card-img-top">
+
+                <div class="card-body">
+
+                    <h6>
+
+                        HP Laptop
+
+                    </h6>
+
+                    <h5 class="text-success">
+
+                        ₹54,999
+
+                    </h5>
+
+                    <button class="btn btn-primary w-100">
+
+                        View
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Frequently Bought Together -->
+
+<section class="container py-5">
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+
+    <h4 class="fw-bold">Frequently Bought Together</h4>
+
+    <button class="btn btn-outline-primary">
+      View All
+    </button>
+
+  </div>
+
+  <div class="row g-4">
+
+    <div class="col-lg-3 col-md-6">
+
+      <div class="card border-0 shadow-sm h-100">
+
+        <img src="assets/products/kurti.jpg"
+             class="card-img-top">
+
+        <div class="card-body">
+
+          <h6>Women's Kurti</h6>
+
+          <p class="text-success fw-bold mb-0">
+            ₹799
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+
+      <div class="card border-0 shadow-sm h-100">
+
+        <img src="assets/products/dupatta.jpg"
+             class="card-img-top">
+
+        <div class="card-body">
+
+          <h6>Matching Dupatta</h6>
+
+          <p class="text-success fw-bold mb-0">
+            ₹299
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+
+      <div class="card border-0 shadow-sm h-100">
+
+        <img src="assets/products/sandal.jpg"
+             class="card-img-top">
+
+        <div class="card-body">
+
+          <h6>Women's Sandals</h6>
+
+          <p class="text-success fw-bold mb-0">
+            ₹699
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+
+      <div class="card border-0 shadow-sm h-100">
+
+        <img src="assets/products/bag.jpg"
+             class="card-img-top">
+
+        <div class="card-body">
+
+          <h6>Hand Bag</h6>
+
+          <p class="text-success fw-bold mb-0">
+            ₹899
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
